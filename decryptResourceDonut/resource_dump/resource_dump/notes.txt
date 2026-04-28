@@ -1,0 +1,29 @@
+Offline resource dump notes
+===========================
+
+Resources copied into raw/:
+  - pjCvA5e88oGlCYclfo.iTkRnou2uybvuMxWn8      encrypted string table used by CoreUtils.DecryptString
+  - QweDNjNWrkMuFjhOOY.7PhYAwGiHKPtcJlEoL      virtualized loader bytecode
+  - r4JutVgxFonyP9i9Tx.MG7FmYrAOfQK2prLU1      AES-encrypted RSA XML key
+  - x0y6b3U8enEOD9FDxN.teZHJmdV98NX3nlK2L      encrypted embedded assembly payload
+
+Fully dumped/decrypted by this script:
+  1. x0y6b3U8enEOD9FDxN.teZHJmdV98NX3nlK2L
+     raw -> CoreUtils.method_1-style block decrypt -> QCLZ-like decompress -> decrypted/embedded_assembly_from_x0.dll
+
+  2. r4JutVgxFonyP9i9Tx.MG7FmYrAOfQK2prLU1
+     raw -> AES-256-CBC using recovered VM key/IV -> decrypted/*.rsa_key.xml
+
+String table pj...:
+  - Fully decrypted by this script with the recovered VM method 0 block key.
+  - Outputs:
+        decrypted/pjCvA5e88oGlCYclfo.iTkRnou2uybvuMxWn8.decrypted_string_table.bin
+        decrypted/strings_from_pj.json
+        decrypted/string_calls_resolved_with_values.json
+  - Source calls to CoreUtils.DecryptString(NUM ^ w_w_init.FIELD) are resolved into vm/string_offsets_unique.json.
+  - String entry format:
+        int32 byte_length; UTF-16LE bytes
+
+Safety:
+  - This script does not execute the target code.
+  - If you instrument/run the target to get CoreUtils.byte_1, use a disposable VM with networking disabled.

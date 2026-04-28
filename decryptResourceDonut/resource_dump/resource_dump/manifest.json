@@ -1,0 +1,104 @@
+{
+  "source_root": "/mnt/data/src_extracted/Zhgcllfd",
+  "resources": {
+    "string_table_encrypted": {
+      "name": "pjCvA5e88oGlCYclfo.iTkRnou2uybvuMxWn8",
+      "found": true,
+      "size": 13780,
+      "sha256": "b94603e74daa9d08c3c4863fc014f81b51b4e6066b674cc6d6fa6c89dc4155d7",
+      "raw_dump": "raw/pjCvA5e88oGlCYclfo.iTkRnou2uybvuMxWn8",
+      "first16_hex": "f2537288a5544603c4db3f0cf350c216"
+    },
+    "vm_bytecode": {
+      "name": "QweDNjNWrkMuFjhOOY.7PhYAwGiHKPtcJlEoL",
+      "found": true,
+      "size": 14894,
+      "sha256": "8f84356f7053d33f18fffae21cf0b0e11641ccad602e94186bea05319380185e",
+      "raw_dump": "raw/QweDNjNWrkMuFjhOOY.7PhYAwGiHKPtcJlEoL",
+      "first16_hex": "003a4b01ab014d0145010d011b010801"
+    },
+    "rsa_xml_encrypted": {
+      "name": "r4JutVgxFonyP9i9Tx.MG7FmYrAOfQK2prLU1",
+      "found": true,
+      "size": 256,
+      "sha256": "f876fb4fd53d9eef49fcc89492682f12ec4ef8060a4337cfd095844d7ff45a0c",
+      "raw_dump": "raw/r4JutVgxFonyP9i9Tx.MG7FmYrAOfQK2prLU1",
+      "first16_hex": "de519d59749b1e20a4b9ba4413675ec5"
+    },
+    "embedded_assembly_encrypted": {
+      "name": "x0y6b3U8enEOD9FDxN.teZHJmdV98NX3nlK2L",
+      "found": true,
+      "size": 2355,
+      "sha256": "d2382146de4aa695a91ba32a8f9b20cae4d3c4f83265c42fdb6723fc45047de5",
+      "raw_dump": "raw/x0y6b3U8enEOD9FDxN.teZHJmdV98NX3nlK2L",
+      "first16_hex": "25cb3e7677cf5b9277486f93a6d9408b"
+    }
+  },
+  "decryption": {
+    "embedded_assembly_encrypted": {
+      "routine": "CoreUtils.method_1-style block decrypt, then QCLZ-like decompression",
+      "key_hex": "b18fac00a2696d648b46809744900344c0cf00952a0b65713cc406703563b468",
+      "block_decrypted": {
+        "path": "decrypted/x0y6b3U8enEOD9FDxN.teZHJmdV98NX3nlK2L.block_decrypted_qclz.bin",
+        "size": 2355,
+        "sha256": "76140520d4f0bfe26c69fb4572547b0bf2a312956e27d019519ee3f887c1cc18",
+        "magic": "QCLZ"
+      },
+      "decompressed_payload": {
+        "path": "decrypted/embedded_assembly_from_x0.dll",
+        "size": 2048,
+        "sha256": "20b30cc95c32a426e0cba7544a31bf3f0b36fed4bcbb4483805c1aed5b4a7fff",
+        "first16_hex": "4d5a90000300000004000000ffff0000",
+        "starts_with_MZ": true
+      }
+    },
+    "rsa_xml_encrypted": {
+      "routine": "AES-256-CBC with recovered VM key/IV; ciphertext is decrypted with -nopad, then PKCS#7 stripped if valid",
+      "key_hex": "ae9f905bc5797ac31b8bb4dc443d5ea3f69264afc323b2fbe1ca1ab059c5ccc5",
+      "iv_hex": "6a2fa8c399e7020aab789823ed037800",
+      "error": null,
+      "aes_decrypted": {
+        "path": "decrypted/r4JutVgxFonyP9i9Tx.MG7FmYrAOfQK2prLU1.aes256cbc_decrypted.bin",
+        "size": 256,
+        "sha256": "e01a2b24c0108607a88b470a01c2645af6e21941f19d21d84b2eeb78c93b70ac",
+        "first16_hex": "3c5253414b657956616c75653e3c4d6f"
+      },
+      "pkcs7_stripped": {
+        "path": "decrypted/r4JutVgxFonyP9i9Tx.MG7FmYrAOfQK2prLU1.rsa_key.xml",
+        "size": 243,
+        "sha256": "ad71c6541bccbc367308fc8334c6ef94237c17d3fc491c6541be674b33b6d1aa",
+        "starts_with_rsa_xml": true
+      }
+    },
+    "string_table_encrypted": {
+      "resource": "pjCvA5e88oGlCYclfo.iTkRnou2uybvuMxWn8",
+      "routine": "VM method 0 final CoreUtils.method_1-style block decrypt; second byte[] arg is unused by the routine",
+      "key_hex": "7a147683fbe80c0e828bda06d7169f4c9a52217cb8b4b22ff77bf9b4d9745f41",
+      "unused_second_arg_hex": "f9ae00d241ac63cc023ec2bcd7ba957a",
+      "decrypted_table": {
+        "path": "decrypted/pjCvA5e88oGlCYclfo.iTkRnou2uybvuMxWn8.decrypted_string_table.bin",
+        "size": 13780,
+        "sha256": "707b12c831b455853003a08b57b113a781319fa2fe93281a75d681fee4bdf17f",
+        "first16_hex": "40000000690062006e0065006a006400"
+      },
+      "parsed_strings": {
+        "path": "decrypted/strings_from_pj.json",
+        "candidate_offsets": 239,
+        "parsed_strings": 239,
+        "format": "int32 byte_length followed by UTF-16LE bytes at each resolved offset"
+      },
+      "source_call_values": {
+        "path": "decrypted/string_calls_resolved_with_values.json",
+        "calls": 270
+      }
+    }
+  },
+  "vm": {
+    "method1_fields_signed": "vm/method1_fields_signed.json",
+    "string_offset_expressions_signed": "vm/string_offset_expressions_signed.json",
+    "string_offsets_unique": "vm/string_offsets_unique.json",
+    "resolved_decryptstring_calls": 270,
+    "unique_resolved_offsets": 239
+  },
+  "safety": "This dumper only reads/writes local files and does not execute the target application."
+}

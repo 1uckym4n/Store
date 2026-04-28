@@ -1,0 +1,157 @@
+{
+  "source": {
+    "file": "C2Channel.cs",
+    "line": 49,
+    "literal": 1418946593,
+    "field": "m_4af34bafb56445dba8b5e58edf93f97e",
+    "field_value": 1418940171,
+    "resolved_offset": 10026
+  },
+  "decode_chain": [
+    {
+      "step": "base64_decode",
+      "output_size": 1355,
+      "magic": "1f8b080000000000000a"
+    },
+    {
+      "step": "gzip_decompress",
+      "output_size": 1732,
+      "first_bytes_hex": "b202c00d0a0d31352e3233352e3135392e383210c1b50310c2b50310c3b5031a"
+    },
+    {
+      "step": "protobuf_like_parse",
+      "outer_field": 38,
+      "outer_wire_type": 2,
+      "outer_length": 1728
+    }
+  ],
+  "decoded_config": {
+    "field_1_host": "15.235.159.82",
+    "field_2_ports": [
+      56001,
+      56002,
+      56003
+    ],
+    "field_3_certificate_base64_length": 1672,
+    "field_3_certificate_der_size": 1254,
+    "field_4_ascii": "TEt",
+    "field_4_base64_padded_decode_note": "field_4 is ASCII 'TEt'; if treated as padded Base64 it decodes to bytes 4c4b ('LK'), but this may not be intended.",
+    "field_7_ascii": "",
+    "field_8_ascii": "APPDATA",
+    "field_9_ascii": "Oaeakcuu"
+  },
+  "certificate": {
+    "subject": "CN=Ldflftf",
+    "issuer": "CN=Ldflftf",
+    "serial_hex": "0xe7408c63fb514b7cba1a27bca22367",
+    "not_before_utc": "2025-02-24T10:14:31+00:00",
+    "not_after_utc": "9999-12-31T23:59:59+00:00",
+    "signature_hash_algorithm": "sha512",
+    "public_key": {
+      "algorithm": "RSA",
+      "bits": 4096,
+      "exponent": 65537
+    },
+    "fingerprints": {
+      "sha256": "b66086466bf62cc1b33b84db24a5f967da79f18d59b7de51f84b9c9acbc28c9c",
+      "sha1": "68a81d42abb025f982a44a7caefb588f515b6790",
+      "md5": "0b85c7b432eb873b535711e0e72c6ef3"
+    },
+    "extensions": [
+      {
+        "oid": "2.5.29.14",
+        "name": "subjectKeyIdentifier",
+        "critical": false,
+        "value": "<SubjectKeyIdentifier(digest=b'\\xefjysl\\xfeL\\x89\\xb6N\\xc9\\xbe\\x06\\xfa\\x89\\xb0\\xe4Nx\\xdc')>"
+      },
+      {
+        "oid": "2.5.29.19",
+        "name": "basicConstraints",
+        "critical": true,
+        "value": "<BasicConstraints(ca=True, path_length=None)>"
+      }
+    ]
+  },
+  "protobuf_fields": [
+    {
+      "field": 1,
+      "wire_type": 2,
+      "start": 0,
+      "type": "length_delimited",
+      "length": 13,
+      "utf8": "15.235.159.82",
+      "end": 15
+    },
+    {
+      "field": 2,
+      "wire_type": 0,
+      "start": 15,
+      "type": "varint",
+      "value": 56001,
+      "end": 19
+    },
+    {
+      "field": 2,
+      "wire_type": 0,
+      "start": 19,
+      "type": "varint",
+      "value": 56002,
+      "end": 23
+    },
+    {
+      "field": 2,
+      "wire_type": 0,
+      "start": 23,
+      "type": "varint",
+      "value": 56003,
+      "end": 27
+    },
+    {
+      "field": 3,
+      "wire_type": 2,
+      "start": 27,
+      "type": "length_delimited",
+      "length": 1672,
+      "utf8": "MIIE4jCCAsqgAwIBAgIQAOdAjGP7UUt8uhonvKIjZzANBgkqhkiG9w0BAQ0FADASMRAwDgYDVQQDDAdMZGZsZnRmMCAXDTI1MDIyNDEwMTQzMVoYDzk5OTkxMjMxMjM1OTU5WjASMRAwDgYDVQQDDAdMZGZsZnRmMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC...<truncated>",
+      "end": 1702
+    },
+    {
+      "field": 4,
+      "wire_type": 2,
+      "start": 1702,
+      "type": "length_delimited",
+      "length": 3,
+      "utf8": "TEt",
+      "end": 1707
+    },
+    {
+      "field": 7,
+      "wire_type": 2,
+      "start": 1707,
+      "type": "length_delimited",
+      "length": 0,
+      "utf8": "",
+      "end": 1709
+    },
+    {
+      "field": 8,
+      "wire_type": 2,
+      "start": 1709,
+      "type": "length_delimited",
+      "length": 7,
+      "utf8": "APPDATA",
+      "end": 1718
+    },
+    {
+      "field": 9,
+      "wire_type": 2,
+      "start": 1718,
+      "type": "length_delimited",
+      "length": 8,
+      "utf8": "Oaeakcuu",
+      "end": 1728
+    }
+  ],
+  "certificate_pem": "-----BEGIN CERTIFICATE-----\nMIIE4jCCAsqgAwIBAgIQAOdAjGP7UUt8uhonvKIjZzANBgkqhkiG9w0BAQ0FADAS\nMRAwDgYDVQQDDAdMZGZsZnRmMCAXDTI1MDIyNDEwMTQzMVoYDzk5OTkxMjMxMjM1\nOTU5WjASMRAwDgYDVQQDDAdMZGZsZnRmMIICIjANBgkqhkiG9w0BAQEFAAOCAg8A\nMIICCgKCAgEAgKu6LRRNZVihsynXDHqdW09KwWlSNK9kE52Q6qSj2k2blCBJYYAI\nAYPhMZuiMXIzu6BFpkV3qkP31FVSx2bzF8f+mXIe06A6v5tbO6h62mWWs+0RJWc4\nvbA2RZnQtFvB6PNr61YsEx7AEBMHGOzzeuz24zcJQdf0UO4ncNxQGOXBukU8Ehcx\nSUjv/7vKBSXbDIZFjDaB0wUODLf/XCBO0j5K+ADkrMfHWcY33KopyKKPrOjVdPMq\ngEV7ZvfWxaqJrqxaJLK5yfio3QE33flBFwFbE1o+w1mQCimBFlzTMrb07Ji0jHso\nshjOmQCR+lXayh2lzCHlnygaz9Flx/Is2CfWNPC8v4SAq2Tbrvg7AqDSXWPpg0NI\nhUZCeILw2qRF3XskE0PnsDLj/b2WEYL/Orm0vvpZ0YjFA9+KkmbrN+e2JkSTSjMn\nT5wdotE709wznJPJuEXpgxmcNoMZ5XqZbrJL45effNX1IAXTgOON7JM1x+Ggq4di\nVIGeMXqscTOuX5t5dhtSs5ziMVQzH3aGLokmfdcB97+so7uLvQKzFzrPS0zoPfOF\nKZ9fE0/qJnJv5AKps0wi0uFehmZ6HEH9t9/SAI0kJF1rbnfOzRiWvUkjleijl7HE\nQRSK+80+97JKLXDkzrwLa7jNiOn3FHF7bGUH9VXsiClTicveVfY0id8CAwEAAaMy\nMDAwHQYDVR0OBBYEFO9qeXNs/kyJtk7Jvgb6ibDkTnjcMA8GA1UdEwEB/wQFMAMB\nAf8wDQYJKoZIhvcNAQENBQADggIBADDlDG2iQB0ptcVf8TzLUVt6JPmAXj6WZYzp\nR/rttQBLRcFeQlWl1s6YEvg1ktsbe6P9ToBxPMC5N+s8m73HXRkJ9EKcNa3W3Mdf\nWOTpVCDQvFdJkUfsO3qMUpaEIavxKCma7kqUgFkdayXgK+F4miQ2mYwr5+2UFsEc\nHmhZ0omdrb8alDk7JxByv8zafB5j16mf0AVoT671RwogFs15TFcwj9Tr+lDnyZzB\ntLMltbjLS/wewpanvq1uPWHT3ol4iOBonODfNGmvhh1cWjg/3FBbh9udsTyBLYFI\najGERIxI86NFWkeTfD9o6d7a/QYwoM2XrrDimgPKOn4eoljJHlKZv+9m2Ya+pojw\ncuL9GeJar3Zbjt3YGisOHqgyzHwqXh3FzLCFh8mRehY7mvxpBjczgfSk+175cueN\nuuOq7TnNTVOmf005+2yjL+evVdQvIxntwoyk/MSg30tr3nZ3nOuCxfYa7gmDasnH\nsALbRCrOBRhbypqaCOkyEKXWXwKIr2gdAoQky/lTwZIh042W7LO69FXgJkQ4pPGg\nQdQxA3Es3J92tmnGjQX0ISNimKyAoHgMSwl7fKSp530MAwlfEwm1e0e5QWsk0QUK\nt20G5r17vJkzLwf71XhfU9ZROe+bArtvZVXQeS27IbHAAbRB2ssw2zUpmWisgbgJ\nvdrZnQcJ\n-----END CERTIFICATE-----\n",
+  "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAgKu6LRRNZVihsynXDHqd\nW09KwWlSNK9kE52Q6qSj2k2blCBJYYAIAYPhMZuiMXIzu6BFpkV3qkP31FVSx2bz\nF8f+mXIe06A6v5tbO6h62mWWs+0RJWc4vbA2RZnQtFvB6PNr61YsEx7AEBMHGOzz\neuz24zcJQdf0UO4ncNxQGOXBukU8EhcxSUjv/7vKBSXbDIZFjDaB0wUODLf/XCBO\n0j5K+ADkrMfHWcY33KopyKKPrOjVdPMqgEV7ZvfWxaqJrqxaJLK5yfio3QE33flB\nFwFbE1o+w1mQCimBFlzTMrb07Ji0jHsoshjOmQCR+lXayh2lzCHlnygaz9Flx/Is\n2CfWNPC8v4SAq2Tbrvg7AqDSXWPpg0NIhUZCeILw2qRF3XskE0PnsDLj/b2WEYL/\nOrm0vvpZ0YjFA9+KkmbrN+e2JkSTSjMnT5wdotE709wznJPJuEXpgxmcNoMZ5XqZ\nbrJL45effNX1IAXTgOON7JM1x+Ggq4diVIGeMXqscTOuX5t5dhtSs5ziMVQzH3aG\nLokmfdcB97+so7uLvQKzFzrPS0zoPfOFKZ9fE0/qJnJv5AKps0wi0uFehmZ6HEH9\nt9/SAI0kJF1rbnfOzRiWvUkjleijl7HEQRSK+80+97JKLXDkzrwLa7jNiOn3FHF7\nbGUH9VXsiClTicveVfY0id8CAwEAAQ==\n-----END PUBLIC KEY-----\n"
+}
